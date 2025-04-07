@@ -1,26 +1,29 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'lenis/dist/lenis.css';
+
+*::selection {
+  background: #f0f0f0;
+  color: #111184;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  background-color: #000;
+  color: #fff;
+  -webkit-background-color: #000; /* Safari-specific */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .common-padding {
+    @apply p-6 max-sm:p-[16px];
+  }
+
+  .common-margin {
+    @apply m-6 max-sm:m-[16px];
+  }
 }
