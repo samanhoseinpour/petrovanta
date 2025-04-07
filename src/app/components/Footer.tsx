@@ -61,7 +61,7 @@ const FooterContent = () => {
         <h2 className="text-[14vw] leading-[0.8] mt-10 uppercase tracking-tight">
           Perseus
         </h2>
-        <p>Copyright &copy; {updatedDate} Perseus Inc. All rights reserved.</p>
+        <p>Copyright © {updatedDate} Perseus Inc. All rights reserved.</p>
       </div>
     </footer>
   );
