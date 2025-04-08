@@ -1,12 +1,18 @@
 export const menuLinks = [
-  { id: 1, name: 'Home', path: '/' },
-  { id: 2, name: 'Services', path: '/services' },
-  { id: 3, name: 'Visual Production', path: '/visual-production' },
-  { id: 4, name: 'Web Development', path: '/web-development' },
-  { id: 5, name: 'Blogs', path: '/blogs' },
-  { id: 6, name: 'Case Studies', path: '/case-studies' },
-  { id: 7, name: 'Contact', path: '/contact' },
-  { id: 8, name: 'About', path: '/about' },
+  {
+    id: 1,
+    title: 'Home',
+    href: '/',
+    src: '/perseus.png',
+  },
+  { id: 2, title: 'Services', href: '/services' },
+  { id: 3, title: 'Industries', href: '/industries' },
+  { id: 4, title: 'Visual Production', href: '/visual-production' },
+  { id: 5, title: 'Web Development', href: '/web-development' },
+  { id: 6, title: 'Blogs', href: '/blogs' },
+  { id: 7, title: 'Case Studies', href: '/case-studies' },
+  { id: 8, title: 'Contact', href: '/contact' },
+  { id: 9, title: 'About', href: '/about' },
 ];
 
 export const footerLinks = [
@@ -50,6 +56,7 @@ export const footerLinks = [
       { label: 'Fitness + Gym', href: '/certification' },
       { label: 'Personal Branding', href: '/publications' },
       { label: 'Websites', href: '/publications' },
+      { label: 'Insights + Prespectives', href: '/blogs' },
     ],
   },
   {
@@ -69,7 +76,7 @@ export const footerLinks = [
         href: 'https://www.youtube.com/@PerseusCreativeStudio',
       },
       { label: 'Facebook', href: 'https://facebook.com/perseusmedia' },
-      // { label: 'Phone Number', href: 'tel:+17788878363' },
+      { label: 'Phone Number', href: 'tel:+17788878363' },
     ],
   },
 ];

@@ -1,5 +1,5 @@
 const VisualProductionPage = () => {
-  return <div>VisualProductionPage</div>;
+  return <main>VisualProductionPage</main>;
 };
 
 export default VisualProductionPage;

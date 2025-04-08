@@ -1,7 +1,5 @@
-import React from 'react';
-
 const WebDevelopmentPage = () => {
-  return <div>WebDevelopmentPage</div>;
+  return <main>WebDevelopmentPage</main>;
 };
 
 export default WebDevelopmentPage;
