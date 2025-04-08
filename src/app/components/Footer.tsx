@@ -6,13 +6,13 @@ const FooterContent = () => {
 
   return (
     <footer
-      className="bg-[#111184] p-12 h-full w-full flex flex-col justify-between"
+      className="bg-[#111184] px-12 py-4 h-full w-full flex flex-col justify-between"
       role="contentinfo"
     >
       {/* Navigation Sections */}
       <nav
         aria-label="Footer Navigation"
-        className="flex shrink-0 gap-20 border-b border-[#fff] py-10"
+        className="flex shrink-0 gap-20 border-b border-[#fff] pt-20 pb-8"
       >
         {footerLinks.map((section) => (
           <section
@@ -61,7 +61,7 @@ const FooterContent = () => {
 
       {/* Brand Philosophy */}
       <section
-        className="border-b border-[#fff] py-10"
+        className="border-b border-[#fff] py-8"
         aria-labelledby="footer-about-heading"
       >
         <h3 id="footer-about-heading" className="text-4xl uppercase font-bold">
@@ -77,7 +77,7 @@ const FooterContent = () => {
       </section>
 
       {/* Branding and Copyright */}
-      <section className="flex justify-between items-end border-b border-[#fff] py-5">
+      <section className="flex justify-between items-end border-b border-[#fff] pb-5">
         <h2 className="text-[14vw] leading-[0.8] mt-10 uppercase tracking-tight">
           Perseus
         </h2>
@@ -97,8 +97,8 @@ const Footer = () => {
       className="relative h-[800px]"
       style={{ clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0 100%)' }}
     >
-      <div className="relative h-[calc(100vh+800px)] -top-[100vh]">
-        <div className="h-[800px] sticky top-[calc(100vh-800px)]">
+      <div className="relative h-[calc(100dvh+800px)] -top-[100dvh]">
+        <div className="h-[800px] sticky top-[calc(100dvh-800px)]">
           <FooterContent />
         </div>
       </div>

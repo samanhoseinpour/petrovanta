@@ -1,6 +1,8 @@
 {
   "name": "Perseus Creative Studio",
   "short_name": "PERSEUS",
+  "description": "A Progressive Web App built with Next.js",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +17,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#fff",
+  "background_color": "#000",
   "display": "standalone"
 }
