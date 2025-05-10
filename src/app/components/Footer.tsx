@@ -6,13 +6,13 @@ const FooterContent = () => {
 
   return (
     <footer
-      className="bg-[#111184] px-12 py-4 h-full w-full flex flex-col justify-between"
+      className="bg-gradient-to-b from-black to black/0 bg-[#9B1313] p-12 h-full w-full flex flex-col justify-between text-white"
       role="contentinfo"
     >
       {/* Navigation Sections */}
       <nav
         aria-label="Footer Navigation"
-        className="flex shrink-0 gap-20 border-b border-[#fff] pt-20 pb-8"
+        className="flex shrink-0 gap-20 border-b border-white pt-20 pb-8"
       >
         {footerLinks.map((section) => (
           <section
@@ -61,7 +61,7 @@ const FooterContent = () => {
 
       {/* Brand Philosophy */}
       <section
-        className="border-b border-[#fff] py-8"
+        className="border-b border-white py-8"
         aria-labelledby="footer-about-heading"
       >
         <h3 id="footer-about-heading" className="text-4xl uppercase font-bold">
@@ -77,14 +77,22 @@ const FooterContent = () => {
       </section>
 
       {/* Branding and Copyright */}
-      <section className="flex justify-between items-end border-b border-[#fff] pb-5">
-        <h2 className="text-[14vw] leading-[0.8] mt-10 uppercase tracking-tight">
-          Perseus
+      <section className="flex justify-between items-end border-b border-white pb-5">
+        <h2 className="text-[10vw] leading-[0.8] mt-10 uppercase tracking-tight">
+          Petrovanta
         </h2>
-        <address className="not-italic">
-          <p>
-            © {updatedDate} Perseus Creative Studio Inc. All rights reserved.
-          </p>
+        <address className="not-italic flex flex-col gap-1">
+          <span>
+            © {updatedDate} Petrovanta Energy Tech Inc - All rights reserved.
+          </span>
+
+          <a
+            href="https://perseustudio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered By Perseus Creative Studio
+          </a>
         </address>
       </section>
     </footer>

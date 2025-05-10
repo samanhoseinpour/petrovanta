@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
   opacity,
   height,
@@ -14,6 +13,18 @@ import {
 import { menuLinks } from '../constants';
 import { usePathname } from 'next/navigation';
 
+// Type Definitions
+interface MenuLink {
+  title: string;
+  href: string;
+  src: string;
+}
+
+interface SelectedLink {
+  isActive: boolean;
+  index: number;
+}
+
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
@@ -23,10 +34,10 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <header className="fixed w-full bg-[#111] px-2 sm:px-5 py-2 sm:py-5 z-50 box-border">
+    <header className="fixed w-full bg-gradient-to-bl from-[#111] to black/0 backdrop-blur-xl sm:px-12 py-2 sm:py-5 z-50 box-border text-white">
       <nav className="relative flex justify-center uppercase text-xs sm:text-sm font-normal">
         <Link href="/" className="absolute left-0 font-semibold">
-          Perseus Creative Studio
+          Petrovanta Energy Technology
         </Link>
 
         <div
@@ -65,13 +76,13 @@ const Navbar = () => {
           className="absolute right-0 flex gap-6 items-center"
         >
           <Link href="/contact" className="hidden sm:block cursor-pointer">
-            Get In Touch With PERSEUS
+            Get In Touch With Petrovanta
           </Link>
         </motion.div>
       </nav>
 
       <motion.div
-        className="bg-[#111] opacity-50 h-full w-full absolute left-0 top-full"
+        className="bg-[#111] opacity-30 h-full w-full absolute left-0 top-full"
         variants={background}
         animate={isActive ? 'open' : 'closed'}
       />
@@ -82,7 +93,7 @@ const Navbar = () => {
 };
 
 const Nav = () => {
-  const [selectedLink, setSelectedLink] = useState({
+  const [selectedLink, setSelectedLink] = useState<SelectedLink>({
     isActive: false,
     index: 0,
   });
@@ -114,7 +125,17 @@ const Nav = () => {
   );
 };
 
-const NavBody = ({ menuLinks, selectedLink, setSelectedLink }) => {
+interface NavBodyProps {
+  menuLinks: MenuLink[];
+  selectedLink: SelectedLink;
+  setSelectedLink: React.Dispatch<React.SetStateAction<SelectedLink>>;
+}
+
+const NavBody = ({
+  menuLinks,
+  selectedLink,
+  setSelectedLink,
+}: NavBodyProps) => {
   const getChars = (word: string) => {
     return word.split('').map((char, i) => (
       <motion.span
@@ -160,14 +181,18 @@ const NavBody = ({ menuLinks, selectedLink, setSelectedLink }) => {
   );
 };
 
-// TODO: should fix the src images for dynamic rendering images
-const NavImage = ({ imgSrc, selectedLink }) => {
+interface NavImageProps {
+  imgSrc: string;
+  selectedLink: SelectedLink;
+}
+
+const NavImage = ({ imgSrc, selectedLink }: NavImageProps) => {
   return (
     <motion.div
       variants={opacity}
       initial="initial"
       animate={selectedLink.isActive ? 'open' : 'closed'}
-      className="hidden lg:block relative w-[500px] h-[350px]"
+      className="hidden lg:block relative w-[500px] h-[450px]"
     >
       <Image
         src={`/images/${imgSrc}`}

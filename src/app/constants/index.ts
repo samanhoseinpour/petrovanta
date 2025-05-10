@@ -5,12 +5,12 @@ export const menuLinks = [
     href: '/',
     src: 'perseus.png',
   },
-  { id: 2, title: 'Services', href: '/services', src: '1.jpeg' },
-  { id: 3, title: 'Industries', href: '/industries', src: '2.jpeg' },
+  { id: 2, title: 'Technology', href: '/technology', src: '1.jpeg' },
+  { id: 3, title: 'Services', href: '/services', src: '2.jpeg' },
   {
     id: 4,
-    title: 'Visual Production',
-    href: '/visual-production',
+    title: 'Industries',
+    href: 'industries',
     src: '3.jpeg',
   },
   {
@@ -30,7 +30,7 @@ export const footerLinks = [
     id: 1,
     title: 'About',
     links: [
-      { label: 'About Perseus', href: '/about' },
+      { label: 'About Petrovanta', href: '/about' },
       { label: 'Our Team', href: '/projects' },
       { label: 'Testimonials', href: '/about' },
       { label: 'Contact Us', href: '/contact' },
@@ -38,23 +38,21 @@ export const footerLinks = [
   },
   {
     id: 2,
-    title: 'Agency Services',
+    title: 'Technology',
     links: [
-      { label: 'Web Design + Development', href: '/services/web-development' },
-      { label: 'Videography & Photography', href: '/services/media' },
-      { label: 'Branding & Design', href: '/services/branding' },
-      { label: 'Branded Content', href: '/services/content' },
+      { label: 'Downwhole Motor', href: '/news' },
+      { label: 'Downwhole Video', href: '/learn' },
+      { label: 'Drilling Jar', href: '/certification' },
+      { label: 'Workover Rig', href: '/publications' },
     ],
   },
   {
     id: 3,
-    title: 'Industries',
+    title: 'Services',
     links: [
-      { label: 'Healthcare + Welness', href: '/news' },
-      { label: 'Real Estate + Construction', href: '/learn' },
-      { label: 'Fitness + Gym', href: '/certification' },
-      { label: 'Personal Branding', href: '/publications' },
-      { label: 'Restaurant', href: '/publications' },
+      { label: 'Downwhole Video', href: '/services/web-development' },
+      { label: 'Downwhole Cutter', href: '/services/media' },
+      { label: 'Open Hole Directional Drilling', href: '/services/branding' },
     ],
   },
   {
